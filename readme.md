@@ -10,8 +10,8 @@
 ## 简单原理
 
 补丁加速的原理是将`com.android.ide.common.repository.ResourceVisibilityLookup.Provider.get(com.android.builder.model.AndroidProject, com.android.builder.model.Variant)`
-方法中对`com.android.ide.common.repository.ResourceVisibilityLookup.Provider.get(com.android.builder.model.AndroidArtifact)`方法的调用替换成`li.joker.AndroidStudioXMLCodeCompletionPatch.fakeTransparentVisibility`方法
-来实现替换耗时代码逻辑的功能。
+方法中对`com.android.ide.common.repository.ResourceVisibilityLookup.Provider.get(com.android.builder.model.AndroidArtifact)`方法的调用的返回值替换成`li.joker.AndroidStudioXMLCodeCompletionPatch.fakeTransparentVisibility`方法
+的返回值来实现替换耗时代码逻辑的功能。
 
 ## 可能的副作用
 
@@ -23,7 +23,7 @@ public.xml功能请参考[What is the use of the res/values/public.xml file on A
 
 如果你使用的macOS系统，那么恭喜你可以直接使用脚本运行：
 ```shell
-curl https://github.com/mimers/AndroidStudio-XCC-Patch/raw/android-studio-cc-auto-patch.sh -o android-studio-cc-auto-patch.sh
+curl https://github.com/mimers/AndroidStudio-XCC-Patch/raw/master/android-studio-cc-auto-patch.sh -o android-studio-cc-auto-patch.sh
 bash android-studio-cc-auto-patch.sh
 ```
 然后重启Android Studio即可。
@@ -31,7 +31,7 @@ bash android-studio-cc-auto-patch.sh
 
 如果你使用的是其他操作系统，则需要手动下载jar包执行：
 1. 首先备份Android Studio安装目录下的plugins/android/lib/sdk-common.jar文件，在使用增量更新方式时需要先恢复此文件到原始状态
-2. 下载jar包，[android-studio-cc-patch.jar](https://github.com/mimers/AndroidStudio-XCC-Patch/archive/android-studio-cc-patch.jar)
+2. 下载jar包，[https://github.com/mimers/AndroidStudio-XCC-Patch/releases/download/1.0/android-studio-cc-patch.jar](https://github.com/mimers/AndroidStudio-XCC-Patch/releases/download/1.0/android-studio-cc-patch.jar)
 3. 执行命令`java -jar android-studio-cc-patch.jar <你的sdk-common.jar文件绝对路径>`
 4. 重启Android Studio
 
