@@ -23,7 +23,7 @@ public.xml功能请参考[What is the use of the res/values/public.xml file on A
 
 如果你使用的macOS系统，那么恭喜你可以直接使用脚本运行：
 ```shell
-curl https://github.com/mimers/AndroidStudio-XCC-Patch/raw/master/android-studio-cc-auto-patch.sh -o android-studio-cc-auto-patch.sh
+curl -L https://github.com/mimers/AndroidStudio-XCC-Patch/raw/master/android-studio-cc-auto-patch.sh -o android-studio-cc-auto-patch.sh
 bash android-studio-cc-auto-patch.sh
 ```
 然后重启Android Studio即可。
