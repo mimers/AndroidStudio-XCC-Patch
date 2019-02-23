@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PATCH_URL="https://github.com/mimers/AndroidStudio-XCC-Patch/archive/android-studio-cc-patch.jar"
+PATCH_URL="https://github.com/mimers/AndroidStudio-XCC-Patch/releases/download/1.0/android-studio-cc-patch.jar"
 CONTENT_JAR="Contents/plugins/android/lib/sdk-common.jar"
 PATCHED_JAR="Contents/plugins/android/lib/sdk-common-patched.jar"
 
