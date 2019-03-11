@@ -17,6 +17,7 @@
 
 使用该补丁替换原始逻辑后并不会对自动补全功能造成明显影响，因为原始代码中耗时操作主要是在过滤当前module依赖项中声明了public.xml，而不在public.xml中包含的资源。
 public.xml功能请参考[What is the use of the res/values/public.xml file on Android?](https://stackoverflow.com/questions/9348614/what-is-the-use-of-the-res-values-public-xml-file-on-android)
+和[Choose resources to make public](https://developer.android.com/studio/projects/android-library#PrivateResources)
 ，如果你的项目使用了很多包含public.xml的依赖，不建议使用此补丁，使用时如果引用了依赖库的资源就需要人工主动判断引用的资源是否是public，编译后请务必在运行时仔细测试资源获取是否正常。
 
 ## 使用方法
